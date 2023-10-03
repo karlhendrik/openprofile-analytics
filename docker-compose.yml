@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis/redis-stack-server
+    ports:
+      - "6379:6379"
+
+  kick-chat-agent:
+    build: ./services/kick-chat-agent
+    depends_on:
+      - redis
+
+  twitch-chat-agent:
+    build: ./services/twitch-chat-agent
+    depends_on:
+      - redis
+
+  data-preprocessor:
+    build: ./services/data-preprocessor
+    depends_on:
+      - redis
+

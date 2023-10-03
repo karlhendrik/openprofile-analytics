@@ -1,0 +1,13 @@
+{% extends "layouts/_base.j2" %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex">
+	{% include "partials/_sidebar.j2" %}
+	<div class="flex-grow bg-gray-50 text-gray-800 p-2 flex flex-wrap">
+	{% include "partials/_header.j2" %}
+	{% include "partials/_topics-chart.j2" %}
+	{% include "partials/_stats.j2" %}
+</div>
+{% endblock %}

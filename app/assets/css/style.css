@@ -1,0 +1,27 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8fafc;
+}
+
+.top-100 {
+    top: 100%;
+}
+.bottom-100 {
+    bottom: 100%;
+}
+.max-h-select {
+    max-height: 300px;
+}
+.items-center {
+    color: black;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.border-multicolor {
+    border-image-source: linear-gradient(90deg,#575a7b,#575a7b 20%,#f9655b 0,#f9655b 40%,#f5c070 0,#f5c070 60%,#6658ea 0,#6658ea 80%,#fcc 0);
+    border-image-slice: 1;
+    border-width: 4px 0 0 0;
+}

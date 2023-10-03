@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- External Libraries -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+	<!-- HTMX -->
+	<script src="https://unpkg.com/htmx.org@1.9.2"></script>
+	<script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
+	<script src="https://unpkg.com/htmx.org/dist/ext/loading-states.js"></script>
+	<script src="https://unpkg.com/htmx.org/dist/ext/sse.js"></script>
+
+	<!-- Custom CSS and JavaScript Files -->
+	<link rel="stylesheet" href="{{ url_for('assets', path='css/style.css') }}">
+	<style>
+		.bg-cover {
+			background-image: url("{{ url_for('assets', path='images/hero-illustration.svg') }}");
+			background-size: cover;
+			background-position: center;
+		}
+
+		.border-multicolor {
+			border-image-source: linear-gradient(90deg, #f9655b 0%, #f9655b 25%, #f5c070 25%, #f5c070 50%, #6658ea 50%, #6658ea 75%, #fcc 75%, #fcc 100%);
+			border-image-slice: 1;
+			border-width: 4px 0 0 0;
+		}
+	</style>
+	<script src="{{ url_for('assets', path='js/main.js') }}"></script>
+
+	<title>{% block title %}{% endblock %}</title>
+</head>
+{% block content %}
+{% endblock %}
+
+</html>

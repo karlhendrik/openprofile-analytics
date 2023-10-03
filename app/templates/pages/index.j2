@@ -1,0 +1,20 @@
+{# Import base template, button and input macros #}
+{% extends "layouts/_base.j2" %}
+
+{% block title %} Openprofile {% endblock %}
+
+{% block content %}
+<body class="font-sans bg-gray-500 text-slate-100 bg-cover" style="background-color: #161616;">
+
+	<!-- Sign form -->
+	<div class="min-h-screen flex justify-center items-center">
+		<div class="mx-auto rounded-lg p-10 max-w-screen-lg w-full">
+			{% include ('partials/_login.j2') %}
+		</div>
+	</div>
+
+	
+	<!-- Footer -->
+	{% include ('partials/_footer.j2') %}
+</body>
+{% endblock %}

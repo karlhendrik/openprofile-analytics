@@ -1,0 +1,43 @@
+<div class="max-w-lg mx-auto bg-slate-200 p-8 rounded-md shadow shadow-slate-300">
+	<img src="{{ url_for('assets', path='images/openprofile.svg') }}" alt="OpenProfile logo" class="h-auto w-auto" />
+	<form action="" class="my-10">
+		<div class="flex flex-col space-y-5">
+			<label for="email">
+				<p class="font-medium text-slate-700 pb-2">Email address</p>
+				<input id="email" name="email" type="email"
+					class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow text-slate-700"
+					placeholder="Enter email address">
+			</label>
+			<label for="password">
+				<p class="font-medium text-slate-700 pb-2">Password</p>
+				<input id="password" name="password" type="password"
+					class="w-full py-3 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow text-slate-700"
+					placeholder="Enter your password">
+			</label>
+			<div class="flex flex-row justify-between">
+				<div>
+					<label for="remember" class="text-slate-600">
+						<input type="checkbox" id="remember" class="w-4 h-4 border-slate-200 focus:bg-purple-600">
+						Remember me
+					</label>
+				</div>
+				<div>
+					<a href="#" class="font-medium text-gray-600 hover:text-gray-800">Forgot Password?</a>
+				</div>
+			</div>
+			<button
+				class="w-full py-3 font-medium text-white bg-indigo-700 hover:bg-indigo-900 rounded-lg border-gray-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+				<span>Sign in</span>
+				<span><img src="{{ url_for('assets', path='images/login.svg') }}" class="h-5 w-5" /></span>
+			</button>
+			<p class="text-center text-slate-600">Not registered yet? <a href="{{ url_for('register_page') }}"
+					class="text-gray-600 hover:text-gray-800 font-medium inline-flex space-x-1 items-center"><span>Register
+						now
+					</span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+							stroke="currentColor" stroke-width="2">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+						</svg></span></a></p>
+		</div>
+	</form>
+</div>

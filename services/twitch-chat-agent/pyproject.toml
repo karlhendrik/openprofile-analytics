@@ -1,0 +1,16 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "", email = ""},
+]
+dependencies = [
+    "aiohttp>=3.8.4",
+    "orjson>=3.9.1",
+    "rich>=13.4.2",
+    "redis>=4.6.0",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}

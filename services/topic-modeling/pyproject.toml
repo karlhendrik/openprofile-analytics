@@ -1,0 +1,15 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "karlhendrik", email = "karlhendrik.soone@proton.me"},
+]
+dependencies = [
+    "bertopic>=0.15.0",
+    "gensim>=4.3.1",
+    "nltk>=3.8.1",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}

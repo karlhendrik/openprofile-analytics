@@ -1,0 +1,50 @@
+<div class="container mx-auto px-4">
+	<div class="bg-white shadow rounded-lg p-4 w-full">
+        <div id="line-chart"></div>
+    </div>
+</div>
+
+<script>
+var options = {
+    series: [{
+        name: 'Viewers Engagement',
+        data: [25, 40, 30, 50, 80, 65, 90, 100, 105, 125]
+    }],
+    chart: {
+        height: 350,
+        type: 'line',
+        zoom: {
+            enabled: false
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        curve: 'smooth'
+    },
+    xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        title: {
+            text: 'Months',
+        },
+    },
+    yaxis: {
+        title: {
+            text: 'Engagement',
+        },
+    },
+    title: {
+        text: 'Viewers Engagement Trend Over Time',
+        align: 'left'
+    },
+    tooltip: {
+        x: {
+            format: 'dd/MM/yy HH:mm'
+        },
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#line-chart"), options);
+chart.render();
+</script>

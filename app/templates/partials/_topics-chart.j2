@@ -1,0 +1,72 @@
+<div class="container mx-auto px-4">
+	<div class="bg-white shadow rounded-lg p-4 w-full">
+		<div id="topics-chart"></div>
+	</div>
+</div>
+
+<script>
+	var options = {
+		series: [{
+			name: 'Topics',
+			data: [35000, 27000, 30000, 44000, 32000, 22000, 41000, 26000, 29000, 46000, 33000, 24000, 42000, 27000, 39000]
+		}],
+		chart: {
+			type: 'bar',
+			height: 300,
+		},
+		plotOptions: {
+			bar: {
+				horizontal: false,
+				columnWidth: '55%',
+				endingShape: 'rounded'
+			},
+		},
+		dataLabels: {
+			enabled: false
+		},
+		stroke: {
+			show: true,
+			width: 2,
+			colors: ['transparent']
+		},
+		xaxis: {
+			categories: [
+				'New Game Releases',
+				'Streamer Drama',
+				'Speedrun Records',
+				'ESports Tournaments',
+				'Game Updates',
+				'Charity Streams',
+				'Cosplay Showcases',
+				'Live Concerts',
+				'Art Contests',
+				'Developer Interviews',
+				'DLC Previews',
+				'Community Events',
+				'Fan Art Submissions',
+				'In-Game Secrets',
+				'Mod Showcases'
+			],
+		},
+		yaxis: {
+			title: {
+				text: 'Viewers'
+			}
+		},
+		fill: {
+			opacity: 1
+		},
+		tooltip: {
+			y: {
+				formatter: function (val) {
+					return val + " viewers"
+				}
+			}
+		}
+	};
+
+	var chart = new ApexCharts(document.querySelector("#topics-chart"), options);
+	chart.render();
+</script>
+
+

@@ -1,0 +1,20 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "", email = ""},
+]
+dependencies = [
+    "aiohttp>=3.8.4",
+    "httpx>=0.24.1",
+    "rich>=13.4.2",
+    "orjson>=3.9.1",
+    "redis>=4.6.0",
+    "aioredis>=2.0.1",
+    "playwright>=1.35.0",
+    "selectolax>=0.3.14",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
